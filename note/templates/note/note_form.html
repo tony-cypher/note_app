@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+    {% block content %}
+
+        {% if form.errors %}
+            <div class="alert alert-danger my-5">
+                {{ form.errors.title.as_text }}
+            </div>
+        {% endif %}
+
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <a href="{% url 'note.list' %}" class="btn btn-danger">Cancel</a>
+            <button class="btn btn-primary mx-3" type="submit">Submit</button>
+        </form>
+ 
+        
+
+    {% endblock %}

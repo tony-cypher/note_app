@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+    {% block content %}
+
+        <div class="mt-4 p-5 bg-primary text-white rounded">
+            <h1>Home Page</h1>
+        </div>
+        <h3>Welcome to Notes Library</h3>
+        <p>Today is {{today}}</p>
+        <a href="{% url 'note.list' %}" class="btn btn-primary">Checkout Notes</a>
+
+
+    {% endblock %}
